@@ -65,8 +65,6 @@ func main() {
 					if err != nil {
 						return
 					}
-				case <-c.Context().Done():
-					return
 				}
 			}
 		})
@@ -75,6 +73,6 @@ func main() {
 	app.Get("/docs/openapi.json", func(c *fiber.Ctx) error {
 		return c.JSON(spec)
 	})
-	log.Println("Listening on :8080")
-	log.Fatal(app.Listen(":8080"))
+	log.Println("Listening on :8081")
+	log.Fatal(app.Listen(":8081"))
 }

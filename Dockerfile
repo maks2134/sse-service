@@ -9,5 +9,5 @@ FROM alpine:latest
 WORKDIR /root/
 COPY --from=build /app/sse-app .
 
-EXPOSE 8080
+EXPOSE 8081
 CMD ["./sse-app"]
